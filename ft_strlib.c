@@ -6,7 +6,7 @@
 /*   By: elerner <elerner@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/10 17:33:11 by elerner           #+#    #+#             */
-/*   Updated: 2023/08/10 19:08:36 by elerner          ###   ########.fr       */
+/*   Updated: 2023/08/11 21:00:40 by elerner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,14 @@ int	ft_putchar(int c)
 	return (1);
 }
 
-unsigned int ft_strlen(char *str)
+unsigned	int	ft_strlen(char *str)
 {
-	
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+		i++;
+	return (i);
 }
 
 int	ft_putstr(char *str)
