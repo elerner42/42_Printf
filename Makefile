@@ -1,6 +1,7 @@
 FILES = ft_printf.c \
 		ft_strlib.c \
-		ft_numlib.c 
+		ft_numlib.c
+
 OBJS = $(FILES:.c=.o)
 
 NAME = libftprintf.a
