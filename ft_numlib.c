@@ -6,7 +6,7 @@
 /*   By: elerner <elerner@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/10 19:02:03 by elerner           #+#    #+#             */
-/*   Updated: 2023/08/12 01:17:19 by elerner          ###   ########.fr       */
+/*   Updated: 2023/08/15 20:00:22 by elerner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,16 +36,45 @@ int	ft_putnbr(int n)
 int	ft_putnbr_base(unsigned int n, char *b)
 {
 	static int	i;
-	size_t		nbr;
+	size_t		num;
 
-	nbr = (size_t)n;
+	num = (size_t)n;
 	i = 0;
-	if (nbr >= ft_strlen(b))
+	if (num >= ft_strlen(b))
 	{
-		ft_putnbr_base(nbr / ft_strlen(b), b);
-		nbr = nbr % ft_strlen(b);
+		ft_putnbr_base(num / ft_strlen(b), b);
+		num = num % ft_strlen(b);
 	}
 	i++;
-	ft_putchar(b[nbr]);
+	ft_putchar(b[num]);
 	return (i);
+}
+
+int	ft_tohexa(unsigned long int num)
+{
+	static int	i;
+	char		*b;
+
+	i = 0;
+	b = "0123456789abcde";
+	if (num >= 16)
+	{
+		ft_tohexa(num / 16);
+		num = num % 16;
+	}
+	i++;
+	ft_putchar(b[num]);
+	return (i);
+}
+
+int	ft_pointer(void *ptr)
+{
+	size_t	num;
+	int		len;
+
+	len = 0;
+	num = (size_t)ptr;
+	len = write(1, "0x", 2);
+	len = len + ft_tohexa(num);
+	return (len);
 }
