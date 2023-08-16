@@ -6,7 +6,7 @@
 /*   By: elerner <elerner@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/10 19:02:03 by elerner           #+#    #+#             */
-/*   Updated: 2023/08/16 10:42:35 by elerner          ###   ########.fr       */
+/*   Updated: 2023/08/16 11:23:52 by elerner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,23 @@ int	ft_putnbr_base(unsigned int n, char *b)
 	{
 		ft_putnbr_base(num / ft_strlen(b), b);
 		num = num % ft_strlen(b);
+	}
+	i++;
+	ft_putchar(b[num]);
+	return (i);
+}
+
+int	ft_tohexa(unsigned long int num)
+{
+	static int	i;
+	char		*b;
+
+	i = 0;
+	b = "0123456789abcdef";
+	if (num >= 16)
+	{
+		ft_tohexa(num / 16);
+		num = num % 16;
 	}
 	i++;
 	ft_putchar(b[num]);

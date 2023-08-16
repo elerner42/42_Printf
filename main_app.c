@@ -6,7 +6,7 @@
 /*   By: elerner <elerner@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/11 21:05:37 by elerner           #+#    #+#             */
-/*   Updated: 2023/08/16 11:10:31 by elerner          ###   ########.fr       */
+/*   Updated: 2023/08/16 11:28:18 by elerner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ int main(void)
     ft_putchar('\n');
     ft_putnbr(-012);
     ft_putchar('\n');*/
-
+/*/
     unsigned int n = 42;
 
     printf("Imprimiendo el número %u en diferentes bases:\n", n);
@@ -96,22 +96,22 @@ int main(void)
     printf("Base 16: ");
     ft_putnbr_base(n, "0123456789ABCDEF");
     printf("\n");
-
-   printf("Test 1: ");
+*/
+   printf("Test 1: %s");
     ft_tohexa(0);
-    printf("\n");
+    ft_putchar('\n');
 
     printf("Test 2: ");
     ft_tohexa(10);
-    printf("\n");
+    ft_putchar('\n');
 
     printf("Test 3: ");
     ft_tohexa(255);
-    printf("\n");
+    ft_putchar('\n');
 
     printf("Test 4: ");
     ft_tohexa(4095);
-    printf("\n");
+    ft_putchar('\n');
     
     return ( 0 );
 }
