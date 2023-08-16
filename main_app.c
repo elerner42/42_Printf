@@ -6,7 +6,7 @@
 /*   By: elerner <elerner@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/11 21:05:37 by elerner           #+#    #+#             */
-/*   Updated: 2023/08/12 01:10:24 by elerner          ###   ########.fr       */
+/*   Updated: 2023/08/16 10:47:22 by elerner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ int main(void)
     ft_putstr("¡Hola, mundo!\n");
     ft_putstr("こんにちは世界");
     printf("\n");*/
-    
+    /*
     printf("PRUBA FUNCION PUTNBR !!!\n");
     printf("Prueba con números positivos y negativos:\n");
     ft_putnbr(0);
@@ -75,7 +75,7 @@ int main(void)
     ft_putnbr(000012);
     ft_putchar('\n');
     ft_putnbr(-012);
-    ft_putchar('\n');
+    ft_putchar('\n');*/
 
     unsigned int n = 42;
 
@@ -99,3 +99,4 @@ int main(void)
     
     return ( 0 );
 }
+//gcc main_app.c -L. -lftprintf -o main
