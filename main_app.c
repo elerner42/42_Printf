@@ -6,7 +6,7 @@
 /*   By: elerner <elerner@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/11 21:05:37 by elerner           #+#    #+#             */
-/*   Updated: 2023/08/16 10:47:22 by elerner          ###   ########.fr       */
+/*   Updated: 2023/08/16 11:10:31 by elerner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,7 +115,4 @@ int main(void)
     
     return ( 0 );
 }
-<<<<<<< HEAD
 //gcc main_app.c -L. -lftprintf -o main
-=======
->>>>>>> refs/remotes/origin/main
