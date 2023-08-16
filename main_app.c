@@ -96,6 +96,22 @@ int main(void)
     printf("Base 16: ");
     ft_putnbr_base(n, "0123456789ABCDEF");
     printf("\n");
+
+   printf("Test 1: ");
+    ft_tohexa(0);
+    printf("\n");
+
+    printf("Test 2: ");
+    ft_tohexa(10);
+    printf("\n");
+
+    printf("Test 3: ");
+    ft_tohexa(255);
+    printf("\n");
+
+    printf("Test 4: ");
+    ft_tohexa(4095);
+    printf("\n");
     
     return ( 0 );
 }
