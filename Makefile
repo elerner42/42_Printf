@@ -1,6 +1,7 @@
 FILES = ft_printf.c \
 		ft_strlib.c \
-		ft_numlib.c
+		ft_numlib.c \
+		ft_type.c
 
 OBJS = $(FILES:.c=.o)
 
@@ -18,7 +19,7 @@ $(NAME): $(OBJS) $(LIB)
 	ar rc $(NAME) $(OBJS)
 
 $(OBJS): $(FILES) $(LIB)
-	gcc $(FLAGS) -c $(FILES)
+	$(CC) $(FLAGS) -c $(FILES)
 
 clean:
 	rm -f $(OBJS)

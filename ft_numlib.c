@@ -6,7 +6,7 @@
 /*   By: elerner <elerner@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/10 19:02:03 by elerner           #+#    #+#             */
-/*   Updated: 2023/08/16 11:23:52 by elerner          ###   ########.fr       */
+/*   Updated: 2023/08/17 20:58:20 by elerner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ int	ft_tohexa(unsigned long int num)
 	return (i);
 }
 
-int	ft_pointer(void *ptr)
+int	ft_ptr(void *ptr)
 {
 	size_t	num;
 	int		len;
