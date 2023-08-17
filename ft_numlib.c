@@ -6,7 +6,7 @@
 /*   By: elerner <elerner@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/10 19:02:03 by elerner           #+#    #+#             */
-/*   Updated: 2023/08/17 20:58:20 by elerner          ###   ########.fr       */
+/*   Updated: 2023/08/17 23:48:33 by elerner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,17 +17,20 @@ int	ft_putnbr(int n)
 	static int		i;
 	long			nbr;
 
-	nbr = (long long )n;
 	i = 0;
-	if (n < 0)
+	nbr = n;
+	if (nbr < 0)
 	{
 		ft_putchar('-');
 		nbr = nbr * (-1);
 	}
 	if (nbr > 9)
+	{
 		ft_putnbr(nbr / 10);
-	ft_putchar(nbr % 10 + 48);
+		nbr = nbr % 10;
+	}
 	i++;
+	ft_putchar(nbr + '0');
 	if (n < 0)
 		i++;
 	return (i);
@@ -70,11 +73,16 @@ int	ft_tohexa(unsigned long int num)
 int	ft_ptr(void *ptr)
 {
 	size_t	num;
-	int		len;
+	long	len;
 
 	len = 0;
 	num = (size_t)ptr;
-	len = write(1, "0x", 2);
-	len = len + ft_tohexa(num);
+	if (num == 0)
+		len = write(1, "0", 1);
+	else
+	{
+		len = write(1, "0x", 2);
+		len = len + ft_tohexa(num);
+	}
 	return (len);
 }

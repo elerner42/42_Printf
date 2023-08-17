@@ -6,7 +6,7 @@
 /*   By: elerner <elerner@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/08 06:57:13 by elerner           #+#    #+#             */
-/*   Updated: 2023/08/17 21:26:52 by elerner          ###   ########.fr       */
+/*   Updated: 2023/08/17 23:43:59 by elerner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,6 @@ int	ft_printf(const char *str, ...)
 			len += ft_putchar(str[i]);
 		i++;
 	}
-	return (0);
+	va_end(arg);
+	return (len);
 }
