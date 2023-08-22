@@ -6,7 +6,7 @@
 /*   By: elerner <elerner@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/10 19:02:03 by elerner           #+#    #+#             */
-/*   Updated: 2023/08/17 23:48:33 by elerner          ###   ########.fr       */
+/*   Updated: 2023/08/19 13:49:12 by elerner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,12 +77,7 @@ int	ft_ptr(void *ptr)
 
 	len = 0;
 	num = (size_t)ptr;
-	if (num == 0)
-		len = write(1, "0", 1);
-	else
-	{
-		len = write(1, "0x", 2);
-		len = len + ft_tohexa(num);
-	}
+	len = write(1, "0x", 2);
+	len = len + ft_tohexa(num);
 	return (len);
 }
