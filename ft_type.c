@@ -6,7 +6,7 @@
 /*   By: elerner <elerner@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/16 18:54:55 by elerner           #+#    #+#             */
-/*   Updated: 2023/08/19 13:47:28 by elerner          ###   ########.fr       */
+/*   Updated: 2023/08/23 18:15:58 by elerner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,13 @@ which expects to receive one or more arguments, and another
 parameter "t" of type char, which indicates the argument type.
 It will return on the standard output the data that needs to be 
 printed on the screen.
+
+Esta función nos ayuda a seleccionar el tipo de datos a imprimir,
+recibe dos parámetros, uno llamado "arg" de tipo va_list,
+que espera recibir uno o más argumentos, y otro
+parámetro "t" de tipo char, que indica el tipo de argumento.
+Devolverá en la salida estándar los datos que deben ser
+impreso en la pantalla.
 */
 
 int	ft_type(va_list arg, char t)

@@ -6,113 +6,101 @@
 /*   By: elerner <elerner@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/11 21:05:37 by elerner           #+#    #+#             */
-/*   Updated: 2023/08/16 11:28:18 by elerner          ###   ########.fr       */
+/*   Updated: 2023/08/23 19:03:36 by elerner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include <limits.h>
+#include <assert.h>
 
 int main(void)
 {
-   /* printf("PRUEBA FUNCION PUTCHAR! \n\n");
+    int len;
+    char c;
+    char *s;
     
-    printf("Prueba con caracteres ASCII:\n");
-    ft_putchar('A');
-    ft_putchar('a');
-    ft_putchar('0');
-    ft_putchar('.');
-    printf("\n");
+    c = 'a';
+    s = "cadena de caracteres";
 
-    printf("Prueba con caracteres no imprimibles:\n");
-    ft_putchar('\n');
-    ft_putchar('\t');
-    printf("\n");
+    printf("CHAR------------\n");
+    len = printf("%c : ", c);    //Original
+    printf("Len: %i\n",len);
+    len = ft_printf("%c : ", c); //Mi función
+    printf("Len: %i\n",len);
+    printf("----------------\n");
 
-    printf("Prueba con valores fuera del rango de caracteres ASCII:\n");
-    ft_putchar(200);
-    ft_putchar(-1);
-    printf("\n");
+    printf("STR------------\n");
+    len = printf("%s : ", s);    //Original
+    printf("Len: %i\n",len);
+    len = ft_printf("%s : ", s); //Mi función
+    printf("Len: %i\n",len);
+    printf("----------------\n");
 
-    printf("PRUEBA FUNCION PUTSTR!!!\n\n");
+    printf("PTR------------\n");
+    len = printf("%p : ", &len);    //Original
+    printf("Len: %i\n",len);
+    len = ft_printf("%p : ", &len); //Mi función
+    printf("Len: %i\n",len);
+    printf("----------------\n");
 
-    printf("Prueba con cadenas de diferentes longitudes:\n");
-    ft_putstr(" \n");
-    ft_putstr("Hola\n");
-    ft_putstr("Esta es una cadena larga");
-    printf("\n");
+    printf("INT i------------\n");
+    len = printf("%i : ", 42);    //Original
+    printf("Len: %i\n",len);
+    len = ft_printf("%i : ", 42); //Mi función
+    printf("Len: %i\n",len);
+    printf("----------------\n");
 
-    printf("Prueba con cadenas que contengan caracteres especiales:\n");
-    ft_putstr("Hola\nMundo\n");
-    ft_putstr("Hola\tMundo");
-    printf("\n");
+    printf("INT u------------\n");
+    len = printf("%u : ", 43);    //Original
+    printf("Len: %i\n",len);
+    len = ft_printf("%u : ", 43); //Mi función
+    printf("Len: %i\n",len);
+    printf("----------------\n");
 
-    printf("Prueba con cadenas que contengan caracteres no ASCII:\n");
-    ft_putstr("¡Hola, mundo!\n");
-    ft_putstr("こんにちは世界");
-    printf("\n");*/
-    /*
-    printf("PRUBA FUNCION PUTNBR !!!\n");
-    printf("Prueba con números positivos y negativos:\n");
-    ft_putnbr(0);
-    ft_putchar('\n');
-    ft_putnbr(1);
-    ft_putchar('\n');
-    ft_putnbr(-1);
-    ft_putchar('\n');
-    ft_putnbr(123);
-    ft_putchar('\n');
-    ft_putnbr(-123);
-    ft_putchar('\n');
+    printf("hex x------------\n");
+    len = printf("%x : ", 111);    //Original
+    printf("Len: %i\n",len);
+    len = ft_printf("%x : ", 111); //Mi función
+    printf("Len: %i\n",len);
+    printf("----------------\n");
 
-    printf("Prueba con números grandes:\n");
-    ft_putnbr(INT_MAX);
-    ft_putchar('\n');
-    ft_putnbr(INT_MIN);
-    ft_putchar('\n');
+    printf("HEX X------------\n");
+    len = printf("%X : ", 111);    //Original
+    printf("Len: %i\n",len);
+    len = ft_printf("%X : ", 111); //Mi función
+    printf("Len: %i\n",len);
+    printf("----------------\n");
+ 
+    printf("PERCENT------------\n");
+    len = printf("%");    //Original
+    printf("Len: %i\n",len);
+    len = ft_printf("%"); //Mi función
+    printf("Len: %i\n",len);
+    printf("----------------\n");
+/*
+   
+    len = ft_printf("El número %u es un flotante.\n", 3);
+    printf("Len: %i",len);
 
-    printf("Prueba con números que contengan ceros a la izquierda:\n");
-    ft_putnbr(000012);
-    ft_putchar('\n');
-    ft_putnbr(-012);
-    ft_putchar('\n');*/
-/*/
-    unsigned int n = 42;
-
-    printf("Imprimiendo el número %u en diferentes bases:\n", n);
-
-    printf("Base 2: ");
-    ft_putnbr_base(n, "01");
-    printf("\n");
-
-    printf("Base 8: ");
-    ft_putnbr_base(n, "01234567");
-    printf("\n");
-
-    printf("Base 10: ");
-    ft_putnbr_base(n, "0123456789");
-    printf("\n");
-
-    printf("Base 16: ");
-    ft_putnbr_base(n, "0123456789ABCDEF");
-    printf("\n");
-*/
-   printf("Test 1: %s");
-    ft_tohexa(0);
-    ft_putchar('\n');
-
-    printf("Test 2: ");
-    ft_tohexa(10);
-    ft_putchar('\n');
-
-    printf("Test 3: ");
-    ft_tohexa(255);
-    ft_putchar('\n');
-
-    printf("Test 4: ");
-    ft_tohexa(4095);
-    ft_putchar('\n');
+    len = ft_printf(" %p %p ", &a, 0);
+    printf("Len: %i",len);
     
+    len = printf(" %p %p ", 0, 0);
+
+    printf("len: %d\n", len); 
+
+    int a;
+
+    //int b = printf("%p\n", 0);
+    int c = ft_printf("%p\n", 0);
+
+    //printf("len: %d\n", b);
+    ft_printf("len: %d\n", c);
+
+    //len2 = printf(" %p %p ", 0x0, 0x0);
+    //printf("%i", len2);
+    */
     return ( 0 );
 }
 //gcc main_app.c -L. -lftprintf -o main

@@ -6,7 +6,7 @@
 /*   By: elerner <elerner@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/10 19:02:03 by elerner           #+#    #+#             */
-/*   Updated: 2023/08/19 13:49:12 by elerner          ###   ########.fr       */
+/*   Updated: 2023/08/23 17:50:11 by elerner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ int	ft_ptr(void *ptr)
 {
 	size_t	num;
 	long	len;
-
+	
 	len = 0;
 	num = (size_t)ptr;
 	len = write(1, "0x", 2);
