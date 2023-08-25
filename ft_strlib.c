@@ -6,7 +6,7 @@
 /*   By: elerner <elerner@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/10 17:33:11 by elerner           #+#    #+#             */
-/*   Updated: 2023/08/17 22:13:46 by elerner          ###   ########.fr       */
+/*   Updated: 2023/08/25 12:05:02 by elerner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 int	ft_putchar(int c)
 {
+	if (!c)
+		return (-1);
 	write (1, &c, 1);
 	return (1);
 }
